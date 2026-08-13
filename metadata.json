@@ -1,0 +1,6 @@
+{
+  "name": "Unique Higher Secondary School",
+  "description": "Official website of Unique Higher Secondary School, Bijunagar, Kuakhia, Jajpur, Odisha. Shaping Minds, Building Futures.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,104 @@
+<svg width="500" height="500" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="logoShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#001a4d" flood-opacity="0.25" />
+    </filter>
+    <filter id="innerBevel" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="blur" />
+      <feOffset dx="2" dy="3" result="offset" />
+      <feComposite in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowDiff" />
+      <feFlood flood-color="#001133" flood-opacity="0.6" />
+      <feComposite in2="shadowDiff" operator="in" />
+      <feComposite in2="SourceGraphic" operator="over" />
+    </filter>
+    <linearGradient id="outerRingGrad" x1="0" y1="0" x2="500" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#003cdb" />
+      <stop offset="50%" stop-color="#002b9e" />
+      <stop offset="100%" stop-color="#001a66" />
+    </linearGradient>
+    <linearGradient id="tulipLeftGrad" x1="160" y1="180" x2="245" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#004be0" />
+      <stop offset="60%" stop-color="#002b9e" />
+      <stop offset="100%" stop-color="#001654" />
+    </linearGradient>
+    <linearGradient id="tulipRightGrad" x1="340" y1="180" x2="255" y2="360" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0052f0" />
+      <stop offset="60%" stop-color="#0033b3" />
+      <stop offset="100%" stop-color="#00185c" />
+    </linearGradient>
+    <linearGradient id="diamondGrad" x1="210" y1="90" x2="290" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#2b77ff" />
+      <stop offset="50%" stop-color="#003bbd" />
+      <stop offset="100%" stop-color="#001966" />
+    </linearGradient>
+    <linearGradient id="ribbonGrad" x1="80" y1="350" x2="420" y2="460" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0038cb" />
+      <stop offset="50%" stop-color="#00248a" />
+      <stop offset="100%" stop-color="#00134d" />
+    </linearGradient>
+    <linearGradient id="ribbonDarkFold" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#00103b" />
+      <stop offset="100%" stop-color="#000821" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer White Base Circle -->
+  <circle cx="250" cy="250" r="242" fill="#ffffff" filter="url(#logoShadow)" />
+
+  <!-- Outer Blue Ring Boundary -->
+  <circle cx="250" cy="250" r="236" fill="#ffffff" stroke="#002fa7" stroke-width="10" />
+
+  <!-- Inner Blue Ring Guide Circle -->
+  <circle cx="250" cy="250" r="202" stroke="#002fa7" stroke-width="4" fill="none" />
+
+  <!-- Arched Path for Top Text -->
+  <path id="topTextArc" d="M 62,250 A 188,188 0 1,1 438,250" fill="none" />
+
+  <!-- Top Text: UNIQUE HIGHER SECONDARY SCHOOL -->
+  <text fill="#002688" font-size="27.5" font-weight="900" font-family="'Arial Black', 'Impact', sans-serif" letter-spacing="2.2">
+    <textPath href="#topTextArc" start-offset="50%" text-anchor="middle">
+      UNIQUE HIGHER SECONDARY SCHOOL
+    </textPath>
+  </text>
+
+  <!-- Left Star -->
+  <g transform="translate(68, 262)">
+    <polygon points="0,-12 3.6,-3.6 12,0 3.6,3.6 0,12 -3.6,3.6 -12,0 -3.6,-3.6" fill="#002fa7" />
+  </g>
+
+  <!-- Right Star -->
+  <g transform="translate(432, 262)">
+    <polygon points="0,-12 3.6,-3.6 12,0 3.6,3.6 0,12 -3.6,3.6 -12,0 -3.6,-3.6" fill="#002fa7" />
+  </g>
+
+  <!-- Central Inner White Disk -->
+  <circle cx="250" cy="250" r="148" fill="#ffffff" stroke="#002fa7" stroke-width="4" />
+
+  <!-- Top 4-Point Diamond Star -->
+  <g filter="url(#innerBevel)">
+    <path d="M 250 96 L 258 128 L 292 136 L 258 144 L 250 176 L 242 144 L 208 136 L 242 128 Z" fill="url(#diamondGrad)" />
+  </g>
+
+  <!-- Central Tulip / Symmetrical Dual-Petal Emblem -->
+  <g id="centerTulip">
+    <path d="M 245 142 C 188 155 152 195 152 268 C 152 328 190 358 245 362 Z" fill="url(#tulipLeftGrad)" stroke="#001859" stroke-width="1.5" />
+    <path d="M 255 142 C 312 155 348 195 348 268 C 348 328 310 358 255 362 Z" fill="url(#tulipRightGrad)" stroke="#001859" stroke-width="1.5" />
+    <line x1="250" y1="140" x2="250" y2="363" stroke="#ffffff" stroke-width="6" stroke-linecap="round" />
+  </g>
+
+  <!-- Bottom Curved Ribbon Banner -->
+  <g id="ribbonGroup">
+    <path d="M 88 358 L 60 388 L 98 402 Z" fill="url(#ribbonDarkFold)" />
+    <path d="M 412 358 L 440 388 L 402 402 Z" fill="url(#ribbonDarkFold)" />
+    <path d="M 88 358 L 28 375 L 68 418 L 102 396 Z" fill="url(#ribbonGrad)" stroke="#00134d" stroke-width="2" />
+    <path d="M 412 358 L 472 375 L 432 418 L 398 396 Z" fill="url(#ribbonGrad)" stroke="#00134d" stroke-width="2" />
+    <path d="M 82 358 Q 250 435 418 358 L 404 425 Q 250 502 96 425 Z" fill="url(#ribbonGrad)" stroke="#001040" stroke-width="3" filter="url(#logoShadow)" />
+    <path d="M 88 365 Q 250 442 412 365" fill="none" stroke="#2b77ff" stroke-width="2" opacity="0.6" />
+    <path id="ribbonTextArc" d="M 94 402 Q 250 478 406 402" fill="none" />
+    <text fill="#ffffff" font-size="26" font-weight="900" font-family="'Arial Black', 'Impact', sans-serif" letter-spacing="3">
+      <textPath href="#ribbonTextArc" start-offset="50%" text-anchor="middle">
+        JAJPUR, ODISHA
+      </textPath>
+    </text>
+  </g>
+</svg>
